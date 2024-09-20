@@ -1,94 +1,104 @@
-body,
-html,
-* {
-    font-size: 16px;
-    box-sizing: border-box;
-    margin: 0;  
-    padding: 0;
-}
+    body,
+    html,
+    * {
+        font-size: 16px;
+        box-sizing: border-box;
+        margin: 0;  
+        padding: 0;
+    }
 
-.card{
-    width: 30%;
-    height: 35rem;
-    border: 8px solid black;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;    
-    align-items: center;    
-    justify-content: space-around;  
-    margin: 2rem 0;
-    background-color: white;
- }
+    .card{
+        width: 30%;
+        height: 90%;
+        border: 8px solid black;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;    
+        align-items: center;    
+        justify-content: space-around;  
+        margin: 2rem 0;
+        background-color: white;
+    }
 
-img{
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
- }
- 
- 
- .CardHeader{
-    font-size:  2.2rem;
-    margin-top: 1.2rem;
- }
+    img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+    
+    
+    .CardHeader{
+        font-size:  2.2rem;
+        margin-top: 1.2rem;
+    }
 
-.Cardtext{
-
-
- }
-
-.container{
-    display: flex;
-    width: 90vw;
-    margin: 2rem auto;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
+    .Cardtext{
 
 
-.Title{
-    text-align: center;
-    font-size: 3rem;
-    background-color: blue;
-}
+    }
 
-body{
-    background-image: url(https://th.bing.com/th/id/OIP.bzm-P0dBvz_duYaXGMA23QHaH0?w=173&h=182&c=7&r=0&o=5&pid=1.7);
-}
-
-.card{
-    transition: all 0.3s;
-}
+    .container{
+        display: flex;
+        width: 90vw;
+        margin: 2rem auto;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
 
 
-.card:hover{
-    transform: scale(1.1)
+    .Title{
+        text-align: center;
+        font-size: 3rem;
+        background-color: blue;
+    }
 
-}
-
-.apple:hover{
-    transition: 90s;
-    transform: rotate(50turn);
-}
-
-.eggs:hover{
-    transition: 2s;
-    transform: scale(2) ;
-
-}
-
-.steak:hover{
-    transform:rotateY(150deg);
-}
-
-.soup:hover{
-    transform: matrix(1, 2, 3, 4, 5, 6);
-}
-
-.mushroom:hover{
-    transition: 5s;
-    transform: translate(120px, 50%);
-}
+    body{
+        background-image: url(https://th.bing.com/th/id/OIP.bzm-P0dBvz_duYaXGMA23QHaH0?w=173&h=182&c=7&r=0&o=5&pid=1.7);
+    }
 
 
+    .apple:hover{
+        transition: 90s;
+        transform: rotate(50turn);
+    }
+
+    .eggs:hover{
+        transition: 2s;
+        transform: scale(2) ;
+
+    }
+
+    .steak:hover{
+        transform:rotateY(150deg);
+    }
+
+    .soup:hover{
+        transform: matrix(1, 2, 3, 4, 5, 6);
+    }
+
+    .mushroom:hover{
+        transition: 5s;
+        transform: translate(120px, 50%);
+    }
+
+
+    @media screen and (max-width: 800px) {
+        .container {
+            flex-direction: row; /* Ensure it stays in a row */
+            justify-content: center; /* Center cards in the row */
+        }
+        .card {
+            width: 40%; /* Adjust card width */
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        .container {
+            flex-direction: row; /* Keep in a row */
+            justify-content: center; /* Center cards */
+        }
+        .card {
+            width: 90%; /* Wider cards for smaller screens */
+        }
+    }
