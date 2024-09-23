@@ -8,7 +8,7 @@
     }
 
     .card{
-        width: 30%;
+        width: 20%;
         height: 90%;
         border: 8px solid black;
         border-radius: 12px;
@@ -16,7 +16,7 @@
         flex-direction: column;    
         align-items: center;    
         justify-content: space-around;  
-        margin: 2rem 0;
+        margin: 2rem ;
         background-color: white;
     }
 
@@ -89,16 +89,21 @@
             justify-content: center; /* Center cards in the row */
         }
         .card {
+            margin: auto;
+            margin-top: 1rem;
             width: 40%; /* Adjust card width */
         }
     }
     
     @media screen and (max-width: 480px) {
         .container {
+            margin: auto;
             flex-direction: row; /* Keep in a row */
             justify-content: center; /* Center cards */
         }
         .card {
+            margin: auto;
+            margin-top: 1rem;
             width: 90%; /* Wider cards for smaller screens */
         }
     }
