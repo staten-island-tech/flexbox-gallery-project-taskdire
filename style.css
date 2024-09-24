@@ -1,105 +1,109 @@
-    body,
-    html,
-    * {
-        font-size: 16px;
-        box-sizing: border-box;
-        margin: 0;  
-        padding: 0;
+/* Global Styles */
+body,
+html,
+* {
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    margin: 2rem auto;
+}
+
+/* Card Styles */
+.card {
+    width: 22%; /* Set card width to a percentage */
+    height: auto;
+    border: 8px solid black;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2rem 0;
+    background-color: white;
+}
+.Title{
+    text-align: center;
+    font-size: 3rem;
+    background-color: blue;
+}
+
+/* Image Styles */
+img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Card Header Styles */
+.CardHeader {
+    font-size: 2.2rem;
+    margin-top: 1.2rem;
+}
+
+/* Hover Effects */
+.apple:hover {
+    transition: 90s;
+    transform: rotate(50turn);
+}
+
+.eggs:hover {
+    transition: 2s;
+    transform: scale(2);
+}
+
+.steak:hover {
+    transform: rotateY(150deg);
+}
+
+.soup:hover {
+    transform: matrix(1, 2, 3, 4, 5, 6);
+}
+
+.mushroom:hover {
+    transition: 5s;
+    transform: translate(120px, 50%);
+}
+
+/* Background Image */
+body {
+    background-image: url(https://th.bing.com/th/id/OIP.bzm-P0dBvz_duYaXGMA23QHaH0?w=173&h=182&c=7&r=0&o=5&pid=1.7);
+}
+
+/* Media Queries for Smaller Screens */
+/* For screens larger than 1200px */
+@media screen and (max-width: 3786px) {
+    .container {
+        flex-direction: row; /* Arrange cards in a row */
+        justify-content: space-around; /* Space cards around the container */
+        align-items: flex-start; /* Align cards to the top */
     }
-
-    .card{
-        width: 22%;
-        height: 90%;
-        border: 8px solid black;
-        border-radius: 12px;
-        display: flex;
-        flex-direction: column;    
-        align-items: center;    
-        justify-content: space-around;  
-        margin: 2rem 0;
-        background-color: white;
+    .card {
+        width: 45%; /* Adjust card width for rows (to leave space for margins) */
+        max-width: 500px; /* Optional: Limit the maximum width */
+        margin: 1rem; /* Add margin to create space between cards */
     }
-
-    img{
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-    }
-    
-    
-    .CardHeader{
-        font-size:  2.2rem;
-        margin-top: 1.2rem;
-    }
-
-    .Cardtext{
+}
 
 
-    }
-
-    .container{
-        display: flex;
-        width: 90vw;
-        margin: 2rem auto;
-        flex-wrap: wrap;
-        justify-content: space-around;
+/* For screens smaller than 480px */
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column; /* Keep stacking vertically */
+        justify-content: center; /* Center cards */
         align-items: center;
     }
-
-
-    .Title{
-        text-align: center;
-        font-size: 3rem;
-        background-color: blue;
+    .card {
+        width: 90%; /* Set width to 90% for very small screens */
+        margin: 1rem auto; /* Adjust margins */
     }
-
-    body{
-        background-image: url(https://th.bing.com/th/id/OIP.bzm-P0dBvz_duYaXGMA23QHaH0?w=173&h=182&c=7&r=0&o=5&pid=1.7);
-    }
-
-
-    .apple:hover{
-        transition: 90s;
-        transform: rotate(50turn);
-    }
-
-    .eggs:hover{
-        transition: 2s;
-        transform: scale(2) ;
-
-    }
-
-    .steak:hover{
-        transform:rotateY(150deg);
-    }
-
-    .soup:hover{
-        transform: matrix(1, 2, 3, 4, 5, 6);
-    }
-
-    .mushroom:hover{
-        transition: 5s;
-        transform: translate(120px, 50%);
-    }
-
-
-    @media screen and (max-width: 800px) {
-        .container {
-            flex-direction: row;
-        }
-    }
-    
-    
-    @media screen and (max-width: 480px) {
-        .container {
-            margin: auto;
-            flex-direction: row; /* Keep in a row */
-            justify-content: center; /* Center cards */
-        }
-        .card {
-            margin: auto;
-            margin-top: 1rem;
-            width: 90%; /* Wider cards for smaller screens */
-            height: auto;
-        }
-    }
+}
